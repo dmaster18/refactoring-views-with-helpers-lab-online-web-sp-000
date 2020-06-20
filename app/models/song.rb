@@ -10,7 +10,6 @@ class Song < ActiveRecord::Base
   def artist_name
     if self.artist
       self.artist =  Artist.find_by(name: self.artist.name)
-      self.save
       self.artist.name
     end
   end
